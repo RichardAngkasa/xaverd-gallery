@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useState } from "react";
+import Head from "next/head";
 import data from "../public/src.json";
 import close from "../public/images/close.svg";
 import { Raleway } from "next/font/google";
@@ -31,6 +32,12 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Xaverd Gallery</title>
+        <meta name="description" content="Collection from enthusiast artist" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/moon.jpg" />
+      </Head>
       {nav ? (
         <>
           <Nav setNav={setNav} />
